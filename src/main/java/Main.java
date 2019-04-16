@@ -1,5 +1,7 @@
 package main.java;
 
+import main.factorymethodpattern.*;
+
 /**
  * Class: Main.
  * @author bcoley2
@@ -16,6 +18,8 @@ public class Main {
 
         
         System.out.println("Hello Assignment");
+        System.out.println(ManufacturerFactory.buildManufacturer(ManufacturerType.TOYOTA));
+        System.out.println(ManufacturerFactory.buildManufacturer(ManufacturerType.VOLKSWAGON));
 
 
 

@@ -61,10 +61,11 @@ dependencies {
 ///////////////////////////////////////////////////////////////////////////
 // Configure Included Tests
 ///////////////////////////////////////////////////////////////////////////
-//test {
-//	filter {
-//		//specific test class
-//		includeTestsMatching "GivenWhiteBox"
-//		includeTestsMatching "CourseTest"
-//	}
-//}
+test {
+	filter {
+		//specific test class
+		//includeTestsMatching "GivenWhiteBox"
+		//includeTestsMatching "CourseTest"
+		includeTestsMatching "UnitTest"
+	}
+}

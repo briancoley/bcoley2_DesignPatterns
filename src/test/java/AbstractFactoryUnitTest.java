@@ -3,9 +3,9 @@ package test.java;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
-import main.factorymethodpattern.Manufacturer;
-import main.factorymethodpattern.ManufacturerFactory;
-import main.factorymethodpattern.ManufacturerType;
+import main.java.factorymethodpattern.Manufacturer;
+import main.java.factorymethodpattern.ManufacturerFactory;
+import main.java.factorymethodpattern.ManufacturerType;
 
 import org.junit.Before;
 import org.junit.Test;

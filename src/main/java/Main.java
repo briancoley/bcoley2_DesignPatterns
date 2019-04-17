@@ -1,8 +1,8 @@
 package main.java;
 
-import main.factorymethodpattern.Manufacturer;
-import main.factorymethodpattern.ManufacturerFactory;
-import main.factorymethodpattern.ManufacturerType;
+import main.java.factorymethodpattern.Manufacturer;
+import main.java.factorymethodpattern.ManufacturerFactory;
+import main.java.factorymethodpattern.ManufacturerType;
 
 /**
  * Class: Main.
@@ -26,10 +26,9 @@ public class Main {
             + " the type of factory to create is passed as an argument.");
         Manufacturer toyotaFactory = ManufacturerFactory.buildManufacturer(ManufacturerType.TOYOTA);
         System.out.println("This is the " + toyotaFactory.getManufacturer() + " factory.");
-        Manufacturer volkswagonFactory = 
-                ManufacturerFactory.buildManufacturer(ManufacturerType.VOLKSWAGON);
+        Manufacturer volkswagonFactory;
+        volkswagonFactory = ManufacturerFactory.buildManufacturer(ManufacturerType.VOLKSWAGON);
         System.out.println("This is the " + volkswagonFactory.getManufacturer() + " factory.");
-
 
     }
 }

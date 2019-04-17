@@ -4,7 +4,7 @@
  *
  */
 
-package main.factorymethodpattern;
+package main.java.factorymethodpattern;
 
 public class Toyota extends Manufacturer {
 

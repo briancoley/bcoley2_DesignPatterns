@@ -4,7 +4,7 @@
  *
  */
 
-package main.factorymethodpattern;
+package main.java.factorymethodpattern;
 
 public class ManufacturerFactory {
     /** Method to create a particular manufacturer based on manufacturer name.

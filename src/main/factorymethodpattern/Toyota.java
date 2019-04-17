@@ -9,13 +9,13 @@ package main.factorymethodpattern;
 public class Toyota extends Manufacturer {
 
     Toyota() {
-        super(ManufacturerType.VOLKSWAGON);
+        super(ManufacturerType.TOYOTA);
         subclassCreate();
     }
 
     @Override
     protected void subclassCreate() {
-        System.out.println("Building Volkswagon");
+        System.out.println("Building Toyota");
 
     }
 

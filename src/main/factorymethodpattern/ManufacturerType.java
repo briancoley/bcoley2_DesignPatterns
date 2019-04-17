@@ -7,5 +7,5 @@
 package main.factorymethodpattern;
 
 public enum ManufacturerType {
-    VOLKSWAGON, TOYOTA;
+    DEFAULT, VOLKSWAGON, TOYOTA;
 }

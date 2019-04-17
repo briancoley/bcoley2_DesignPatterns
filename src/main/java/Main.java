@@ -1,6 +1,8 @@
 package main.java;
 
-import main.factorymethodpattern.*;
+import main.factorymethodpattern.Manufacturer;
+import main.factorymethodpattern.ManufacturerFactory;
+import main.factorymethodpattern.ManufacturerType;
 
 /**
  * Class: Main.
@@ -16,11 +18,17 @@ public class Main {
      */
     public static void main(String[] args)throws Exception {
 
-        
-        System.out.println("Hello Assignment");
-        System.out.println(ManufacturerFactory.buildManufacturer(ManufacturerType.TOYOTA));
-        System.out.println(ManufacturerFactory.buildManufacturer(ManufacturerType.VOLKSWAGON));
-
+        /**
+         * The following Factory Method is called twice, but each time 
+         * the type of factory to create is passed as an argument.
+         */
+        System.out.println("The following Factory Method is called, but each time" 
+            + " the type of factory to create is passed as an argument.");
+        Manufacturer toyotaFactory = ManufacturerFactory.buildManufacturer(ManufacturerType.TOYOTA);
+        System.out.println("This is the " + toyotaFactory.getManufacturer() + " factory.");
+        Manufacturer volkswagonFactory = 
+                ManufacturerFactory.buildManufacturer(ManufacturerType.VOLKSWAGON);
+        System.out.println("This is the " + volkswagonFactory.getManufacturer() + " factory.");
 
 
     }

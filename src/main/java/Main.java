@@ -1,5 +1,9 @@
 package main.java;
 
+import main.java.decoratorpattern.VehicleConcrete;
+import main.java.decoratorpattern.VehicleDecorator;
+import main.java.decoratorpattern.decorators.CheapDecorator;
+import main.java.decoratorpattern.decorators.EfficientDecorator;
 import main.java.factorymethodpattern.Manufacturer;
 import main.java.factorymethodpattern.ManufacturerFactory;
 import main.java.factorymethodpattern.ManufacturerType;
@@ -29,6 +33,16 @@ public class Main {
         Manufacturer volkswagonFactory;
         volkswagonFactory = ManufacturerFactory.buildManufacturer(ManufacturerType.VOLKSWAGON);
         System.out.println("This is the " + volkswagonFactory.getManufacturer() + " factory.");
+        
+        System.out.println("Now we will create cars, but each time the car will "
+                + "be decorated differently. The result should be vehicles with "
+                + "different characteristics than the default class provides.");
+        VehicleDecorator decoratedVehicle = new EfficientDecorator(new CheapDecorator(new VehicleConcrete()));
+        System.out.println(decoratedVehicle.getTraits());
+        VehicleDecorator decoratedVehicle2 = new CheapDecorator(new EfficientDecorator(new VehicleConcrete()));
+        System.out.println(decoratedVehicle2.getTraits());
+        VehicleDecorator decoratedVehicle3 = new EfficientDecorator( new CheapDecorator(new CheapDecorator( new EfficientDecorator(new VehicleConcrete()))));
+        System.out.println(decoratedVehicle3.getTraits());
 
     }
 }

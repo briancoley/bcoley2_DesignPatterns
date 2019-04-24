@@ -1,6 +1,6 @@
 /**
- * @author brian
- * @version 20190416
+ * @author bcoley2
+ * @version 20190423
  *
  */
 
@@ -17,11 +17,12 @@ public class ManufacturerFactory {
             case VOLKSWAGON:
                 manufacturer = new Volkswagon();
                 break;
-    
             case TOYOTA:
                 manufacturer = new Toyota();
                 break;
-    
+            case CHEVY:
+                manufacturer = new Chevy();
+                break;
             default:
                 System.out.println("Manufacturer Doesn't Exist!!!");
                 break;

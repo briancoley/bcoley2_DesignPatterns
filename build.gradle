@@ -19,7 +19,19 @@ dependencies {
 
     compile "junit:junit:4.12" 
     compile files('cls/')
+    compile files('src/')
 }
+sourceSets {
+    main {
+        java {
+            srcDirs 'src/main/java'
+            srcDirs 'src/main/java/decoratorpattern'
+            srcDirs 'src/main/java/decoratorpattern/decorators'
+            srcDirs 'src/main/java/decoratorpattern/factorymethodpattern'
+            srcDirs 'src/main/java/decoratorpattern/templatemethod'
+        }
+    }
+ }
 
 ///////////////////////////////////////////////////////////////////////////
 // Configure Checkstyle
@@ -47,6 +59,7 @@ dependencies {
 ///////////////////////////////////////////////////////////////////////////
 
  spotbugs {
+   ignoreFailures = true
    toolVersion = '3.1.12'
  }
 
@@ -63,9 +76,6 @@ dependencies {
 ///////////////////////////////////////////////////////////////////////////
 test {
 	filter {
-		//specific test class
-		//includeTestsMatching "GivenWhiteBox"
-		//includeTestsMatching "CourseTest"
-		includeTestsMatching "AbstractFactoryUnitTest"
+		includeTestsMatching "CarFactoryUnitTest"
 	}
 }

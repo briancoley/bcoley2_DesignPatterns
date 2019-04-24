@@ -1,12 +1,18 @@
 /**
- * @author brian
- * @version 20190416
+ * @author bcoley2
+ * @version 20190423
  *
  */
 
 package main.java.factorymethodpattern;
 
+import java.util.ArrayList;
+
+import main.java.decoratorpattern.Vehicle;
+
 public abstract class Manufacturer {
+
+    protected ArrayList<Vehicle> carList = new ArrayList<Vehicle>();
 
     /** Sets initial manufacturer type and then creates company object.
      * @param manufacturer Manufacturer Name
@@ -37,6 +43,14 @@ public abstract class Manufacturer {
      */
     public void setManufacturer(ManufacturerType manufacturer) {
         this.manufacturer = manufacturer;
+    }
+
+    public ArrayList<Vehicle> getCarList() {
+        return carList;
+    }
+
+    public void buildCar(Vehicle vehicle) {
+
     }
 
 }

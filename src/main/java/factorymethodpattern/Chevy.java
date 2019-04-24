@@ -6,16 +6,16 @@
 
 package main.java.factorymethodpattern;
 
-public class Volkswagon extends Manufacturer {
+public class Chevy extends Manufacturer {
 
-    Volkswagon() {
-        super(ManufacturerType.VOLKSWAGON);
+    Chevy() {
+        super(ManufacturerType.CHEVY);
         subclassCreate();
     }
 
     @Override
     protected void subclassCreate() {
-        System.out.println("Building Volkswagon");
+        System.out.println("Building Chevy");
 
     }
 

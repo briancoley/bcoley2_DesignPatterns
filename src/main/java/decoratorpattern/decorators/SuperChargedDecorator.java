@@ -9,9 +9,9 @@ package main.java.decoratorpattern.decorators;
 import main.java.decoratorpattern.Vehicle;
 import main.java.decoratorpattern.VehicleDecorator;
 
-public class EfficientDecorator extends VehicleDecorator {
+public class SuperChargedDecorator extends VehicleDecorator {
 
-    public EfficientDecorator(Vehicle vehicle) {
+    public SuperChargedDecorator(Vehicle vehicle) {
         super(vehicle);
     }
 
@@ -20,7 +20,7 @@ public class EfficientDecorator extends VehicleDecorator {
     }
 
     private String addMoreTraits(String data) {
-        return data  + " Efficient ";
+        return data  + " SuperCharged ";
     }
 
 }
